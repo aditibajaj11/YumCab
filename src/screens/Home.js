@@ -45,7 +45,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div style={{ backgroundColor: 'white' }}>
       <Navbar />
       <div>
         <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel">
