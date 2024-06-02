@@ -58,13 +58,13 @@ export default function Home() {
               </div>
             </div>
             <div className="carousel-item active" >
-              <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100  " style={{ filter: "brightness(30%)" }} alt="..." />
+              <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100  " style={{ filter: "brightness(30%)" ,objectFit: "cover"}} alt="..." />
             </div>
             <div className="carousel-item">
-              <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100 " style={{ filter: "brightness(30%)" }} alt="..." />
+              <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100 " style={{ filter: "brightness(30%)" ,objectFit: "cover"}} alt="..." />
             </div>
             <div className="carousel-item">
-              <img src="https://source.unsplash.com/random/900x700/?barbeque" className="d-block w-100 " style={{ filter: "brightness(30%)" }} alt="..." />
+              <img src="https://source.unsplash.com/random/900x700/?barbeque" className="d-block w-100 " style={{ filter: "brightness(30%)" ,objectFit: "cover"}} alt="..." />
             </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -83,8 +83,8 @@ export default function Home() {
         ) : (
           foodCat.map((category) => (
             <div className='row mb-3' key={category.id}>
-              <div className='fs-3 m-3'>{category.CategoryName}</div>
-              <hr id="hr-success" style={{ height: "4px", backgroundImage: "-webkit-linear-gradient(left,rgb(0, 255, 137),rgb(0, 0, 0))" }} />
+              <div className='fs-3 m-3' style={{ color: '#FF0000' }}>{category.CategoryName}</div>
+              <hr id="hr-success" style={{ height: "4px", backgroundColor: "#FF0000"backgroundImage: "-webkit-linear-gradient(left,rgb(0, 255, 137),rgb(0, 0, 0))" }} />
               {foodItems
                 .filter((item) => item.CategoryName === category.CategoryName && item.name.toLowerCase().includes(search.toLowerCase()))
                 .map((filteredItem) => (
